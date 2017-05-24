@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.urls import reverse_lazy
+from django.views.generic import RedirectView
+from product import views
 
 urlpatterns = [
+    url(r'^$', RedirectView.as_view(url=reverse_lazy('category-list-view'), permanent=False)),
+    url(r'^products/$', views.CategoryListView.as_view(), name='category-list-view'),
+    url(r'^/products/(?P<slug>[\w-]+)/$', views.CategoryDetailView.as_view(), name='category-detail-view'),
     url(r'^admin/', admin.site.urls),
 ]
