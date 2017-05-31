@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <table border="1">
+        <thead>
+        <th>Name</th>
+        <th>Descrption</th>
+        <th>Price</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ object.name }}</td>
+                <td>{{ object.description }}</td>
+                <td>{{ object.price }}$</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

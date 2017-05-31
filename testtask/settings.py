@@ -25,7 +25,7 @@ SECRET_KEY = '32plb2=z_@b1%f4ue(lm#yefm0gnzns2tu!495j@u2x!boo%d-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -120,3 +120,9 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+try:
+    from testtask.settings_local import *
+except ImportError:
+    pass
+
