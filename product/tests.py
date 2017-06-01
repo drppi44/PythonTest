@@ -10,7 +10,6 @@ class HtmlTest(TestCase):
         """
         Fixture contains categories
         Expect result: all category names are in rendered html.
-        :return:
         """
         response = self.client.get(reverse('category-list-view'))
 

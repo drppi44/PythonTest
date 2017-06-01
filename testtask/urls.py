@@ -24,6 +24,6 @@ urlpatterns = [
     url(r'^products/$', views.CategoryListView.as_view(), name='category-list-view'),
     url(r'^products/added-last-day/$', views.AddedLastDayProductsListView.as_view(), name='added-last-day-products-list-view'),
     url(r'^products/(?P<slug>[\w-]+)/$', views.CategoryDetailView.as_view(), name='category-detail-view'),
-    url(r'^products/(?P<category_clug>[\w-]+)/(?P<product_slug>[\w-]+)$', views.ProductDetailView.as_view(), name='product-detail-view'),
+    url(r'^products/(?P<category_slug>[\w-]+)/(?P<product_slug>[\w-]+)$', views.ProductDetailView.as_view(), name='product-detail-view'),
     url(r'^admin/', admin.site.urls),
 ]

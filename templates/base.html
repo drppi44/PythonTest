@@ -5,9 +5,7 @@
     <title>PythonTest</title>
 </head>
 <body>
-{% if user.is_authenticated %}
-    <a href="{% url 'added-last-day-products-list-view' %}">Products added for last day.</a>
-{% endif %}
+<a href="{% url 'added-last-day-products-list-view' %}">Products added for last day. (only for authenticated users)</a>
 {% block body %}{% endblock %}
 </body>
 </html>
