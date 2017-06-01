@@ -14,5 +14,4 @@ Deploy postgres database and user:
 
 Tips:
 1. settings_local.py for postgres database
-2. link for products added for the last day is only avaliable for authenticated
-   user, so: go to admin panel, log in then link will be on every page
+2. link for products added for the last day is only avaliable for logged in user ( login_url  '/admin' )
